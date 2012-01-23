@@ -1,0 +1,15 @@
+title = 'mumps / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+architectures = [
+    "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+
+is_affected = .build-depends ~ /libmumps-(seq-|scotch-|ptscotch-|)dev/;
+is_affected = .depends ~ /libmumps-(seq-|scotch-|ptscotch-|)4.10.0/;
+is_bad = .depends ~ /libmumps-(seq-|scotch-|ptscotch-|)4.9.2/;
