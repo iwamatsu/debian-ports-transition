@@ -1,0 +1,17 @@
+title = 'gnome3 / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+architectures = [
+    "alpha"; "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected =  .build-depends ~ /libnautilus-extension-dev|libgnome-bluetooth-dev|libpanel-applet2-dev|libpanel-applet-4-dev|libbrasero-media-dev|libbrasero-media3-dev|libgnomekbd-dev|libgnome-media-dev|libgnome-media-profiles-dev/ | .depends ~ /python-gnomeapplet/;
+is_good =  .depends ~ /libnautilus-extension1a|libgnome-bluetooth8|libpanel-applet-4-0|libbrasero-media3-1|libgnomekbd7|libgnome-media-profiles-3.0-0/;
+is_bad = .depends ~ /libnautilus-extension1\W|libgnome-bluetooth7|libpanel-applet2-0|libbrasero-media0|libgnomekbd4|libgnome-media0|python-gnomeapplet/;
+

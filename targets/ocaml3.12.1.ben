@@ -1,0 +1,17 @@
+# ben configuration file for xorg transition
+title = 'ocaml3.12.1 / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+architectures = [
+    "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected = .maintainer ~ /debian-ocaml-maint/ | .build-depends ~ /ocaml/ | .build-depends-indep ~ /ocaml/ | .depends ~ /ocaml(-base)?(-nox)?-3\.1(1|2)\../;
+is_good = .depends ~ /ocaml(-base)?(-nox)?-3\.12\.1/;
+is_bad = .depends ~ /ocaml(-base)?(-nox)?-3\.12\.0/;
