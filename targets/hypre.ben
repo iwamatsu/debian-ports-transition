@@ -1,0 +1,14 @@
+title = 'hypre 2.8 / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+architectures = [
+    "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected = .build-depends ~ /libhypre-dev/;
+is_good = .depends ~ /libhypre-2.8.0b/;
+is_bad = .depends ~ /libhypre-2.4.0/;
