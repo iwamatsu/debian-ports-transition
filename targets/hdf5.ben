@@ -6,8 +6,6 @@ buildd_host = 'http://buildd.debian-ports.org';
 suite = "unstable";
 areas = [ "main" ];
 
-#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
-#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 architectures = [
     "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 ];
