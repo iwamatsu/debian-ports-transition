@@ -1,0 +1,17 @@
+# ben configuration file for xorg transition
+title = 'slepc transition / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+#  "alpha"; "armhf"; "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+#    "armhf"; "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+architectures = [
+    "alpha"; "armhf"; "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected = .build-depends ~ /libslepc3.(0\.0|1)-dev/;
+is_good = .depends ~ /libslepc3.1/ | .depends ~ /slepc3.1-doc/;
+is_bad = .depends ~ /libslepc3.0/ | .depends ~ /slepc3.0-doc/;
