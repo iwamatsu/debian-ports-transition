@@ -1,4 +1,3 @@
-# ben configuration file for xorg transition
 title = 'mono / debian-ports.org';
 #mirror = "http://ftp.debian-ports.org/debian";
 mirror = "http://ftp.jp.debian.org/debian";
@@ -6,8 +5,6 @@ buildd_host = 'http://buildd.debian-ports.org';
 suite = "unstable";
 areas = [ "main" ];
 
-#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
-#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 architectures = [
     "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 ];
@@ -15,4 +12,3 @@ architectures = [
 is_affected = .build-depends ~ /mono-devel/ | .build-depends-indep ~ /mono-devel/;
 is_good = .depends ~ /libmono-corlib4.0-cil/;
 is_bad =  .depends ~ /libmono-corlib2.0-cil/;
-
