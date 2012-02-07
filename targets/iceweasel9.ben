@@ -11,4 +11,4 @@ architectures = [
 
 is_affected = .build-depends ~ /xulrunner-dev|libmozjs-dev/;
 is_good = .depends ~ /xulrunner-9.0|libmozjs9d/;
-is_bad = ..depends ~ /xulrunner-1.9.1|xulrunner-5.0|libmozjs2d|libmozjs5d|xulrunner-6.0|libmozjs6d|xulrunner-7.0|libmozjs7d|libmozjs8d|xulrunner-8.0/;
+is_bad = .depends ~ /xulrunner-1.9.1|xulrunner-5.0|libmozjs2d|libmozjs5d|xulrunner-6.0|libmozjs6d|xulrunner-7.0|libmozjs7d|libmozjs8d|xulrunner-8.0/;

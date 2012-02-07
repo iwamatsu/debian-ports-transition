@@ -11,4 +11,4 @@ architectures = [
 
 is_affected = ..build-depends ~ /libgdcm2-dev/;
 is_good = .depends ~ /libgdcm2.2/;
-is_bad = ..depends ~ /libgdcm2.0/;
+is_bad = .depends ~ /libgdcm2.0/;
