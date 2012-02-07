@@ -12,5 +12,5 @@ architectures = [
 
 
 is_affected = .build-depends ~ /libaudiofile-dev/;
-is_good = ..depends ~ /libaudiofile1/;
+is_good = .depends ~ /libaudiofile1/;
 is_bad = .depends ~ /libaudiofile0/;

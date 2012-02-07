@@ -11,4 +11,4 @@ architectures = [
 
 is_affected = .build-depends ~ /libyajl-dev/;
 is_good = .depends ~ /libyajl2/;
-is_bad = ..depends ~ /libyajl1/;
+is_bad = .depends ~ /libyajl1/;
