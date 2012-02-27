@@ -9,7 +9,6 @@ architectures = [
     "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 ];
 
-
 is_affected = .build-depends ~ /libmumps-(seq-|scotch-|ptscotch-|)dev/;
-is_affected = .depends ~ /libmumps-(seq-|scotch-|ptscotch-|)4.10.0/;
+is_good = .depends ~ /libmumps-(seq-|scotch-|ptscotch-|)4.10.0/;
 is_bad = .depends ~ /libmumps-(seq-|scotch-|ptscotch-|)4.9.2/;
