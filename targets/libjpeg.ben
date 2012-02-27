@@ -1,4 +1,3 @@
-# ben configuration file for xorg transition
 title = 'libjpeg transition to libjpeg8 / debian-ports.org';
 #mirror = "http://ftp.debian-ports.org/debian";
 mirror = "http://ftp.jp.debian.org/debian";
@@ -14,4 +13,4 @@ architectures = [
 
 is_affected = .build-depends ~ /libjpeg-dev/;
 is_good = .depends ~ /libjpeg8/;
-is_bad =  .depends ~ /libjpeg62/;
+is_bad = .depends ~ /libjpeg62/;
