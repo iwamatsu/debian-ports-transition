@@ -1,0 +1,16 @@
+title = 'libbabl-libgegl transition / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+architectures = [
+    "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected = .depends ~ /libbabl|libgegl/;
+is_good = .depends ~ /libbabl-0.1-0|libgegl-0.1-0/;
+is_bad = .depends ~ /libbabl-0.0-0|libgegl-0.0-0/;
