@@ -1,0 +1,16 @@
+title = 'roaraudio 1.0~beta0 / debian-ports.org';
+#mirror = "http://ftp.debian-ports.org/debian";
+mirror = "http://ftp.jp.debian.org/debian";
+buildd_host = 'http://buildd.debian-ports.org';
+suite = "unstable";
+areas = [ "main" ];
+
+#  "alpha";  "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+#     "avr32"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+architectures = [
+    "alpha"; "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
+];
+
+is_affected = .build-depends ~ /libroar-dev/ ;
+is_good = .depends ~ /libroar2|libroar-compat2/ | .suggests ~ /libroar2|libroar-compat2/ | .recommends ~ /libroar2|libroar-compat2/;
+is_bad = .depends ~ /libroar1|libroar-compat1/ | .suggests ~ /libroar1|libroar-compat1/ | .recommends ~ /libroar1|libroar-compat1/;
