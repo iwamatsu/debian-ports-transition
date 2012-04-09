@@ -1,4 +1,4 @@
-title = 'boost 1.48 / debian-ports.org';
+title = 'boost 1.49 / debian-ports.org';
 #mirror = "http://ftp.debian-ports.org/debian";
 mirror = "http://ftp.jp.debian.org/debian";
 buildd_host = 'http://buildd.debian-ports.org';
@@ -11,8 +11,7 @@ architectures = [
     "alpha"; "avr32"; "hppa"; "m68k"; "powerpcspe"; "sh4"; "sparc64"
 ];
 
-
 is_affected = .build-depends ~ /libboost[a-z-]*-dev/;
-is_good = .depends ~ /libboost[a-z-]*1\.48/;
-is_bad = .depends ~ /libboost[a-z-]*1\.46/;
+is_good = .depends ~ /libboost[a-z-]*1\.49/;
+is_bad = .depends ~ /libboost[a-z-]*1\.4[6-8]/;
 
